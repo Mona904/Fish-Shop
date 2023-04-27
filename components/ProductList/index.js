@@ -7,7 +7,7 @@ export default function ProductList() {
   const router = useRouter();
   const { data } = useSWR("/api/products");
 
-  if (!data) {
+  if (!(data)) {
     return <h1>Loading...</h1>;
   }
 
